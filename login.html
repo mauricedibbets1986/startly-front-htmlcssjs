@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/startly.css" rel="stylesheet" type="text/css">
+    <title>Startly Log in</title>
+</head>
+<body>
+    <div class="sign-in-up-password-wrapper">
+        <div class="sign-in-up-passowrd-art-wrapper">
+            <div class="sign-in-up-password-art-header-wrapper">
+                <h1 class="sign-in-up-password-header-large">A great productive day starts here</h1>
+            </div>
+        </div>
+        <div class="sign-in-up-password-form-side">
+            <div class="sign-in-up-password-form">
+                <form id="signin-form" action="javascript:login()">
+                    <div class="sign-in-up-password-form-header-wrapper">
+                        <h2 class="form-header">Log in to Startly</h2>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-item-wrapper">
+                                <label for="signin-email" class="field-label">Email Adress</label>
+                                <input type="email" class="input-field" maxlength="256" name="signin-email" data-name="signin-email" placeholder="" id="signin-email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-item-wrapper">
+                                <label for="signin-password" class="field-label">Password</label>
+                                <input type="password" class="input-field" maxlength="256" name="signin-password" data-name="signin-password" placeholder="" id="signin-password">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Log In Account" data-wait="Please wait..." class="button wide-button">
+                </form>
+            </div>
+        </div>
+        </div><a href="signup.html" class="change-to-signin-signup-link">Not a member?<span class="inline-link"> Sign up</span></a></div>
+    </div>
+    <script>
+        // log in
+        function login() {
+            console.log("signin function started");
+            var email = document.getElementById('signin-email').value;
+            var password = document.getElementById('signin-password').value;
+
+            localStorage.setItem("startly-email", email);
+            localStorage.setItem("startly-password", password);
+
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 'OK' || (xhr.status >= 200 && xhr.status < 400)) {
+                
+                        var inhoudDB = JSON.parse(this.responseText);
+                        console.log("VERSTUREN SIGNIN GELUKT!");
+                        localStorage.setItem("startly-login", "yes");
+
+                        if (password == inhoudDB.passwordHash) {
+                            console.log("inloggegevens gevonden");
+                            window.location.href = "index.html";
+                        } else {
+                            console.log("inloggegevens onjuist");
+                            alert("inloggegevens zijn onjuist");
+                        }
+
+                    } else {
+                        console.log("VERSTUREN SIGNIN IS NIET GELUKT!");
+                        alert("inloggegevens zijn onjuist");
+                    }
+                }
+            }
+
+            xhr.open("GET", "http://localhost:8082/api/customer/getByEmail/" + email, true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

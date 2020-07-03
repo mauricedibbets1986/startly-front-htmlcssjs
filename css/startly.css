@@ -1,0 +1,736 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: #f9f9f9;
+font-family: 'Open Sans', sans-serif;
+color: #2d2a2b;
+font-size: 16px;
+line-height: 22px;
+font-weight: 400;
+}
+
+.page-outer-container {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+max-height: 100vh;
+max-width: 1920px;
+min-height: 100vh;
+margin-right: auto;
+margin-left: auto;
+}
+
+.no-border {
+    border: none;
+}
+
+/*
+====================
+maincontent css
+====================
+*/
+.container {
+width: 100%;
+padding-right: 68px;
+padding-left: 68px;
+}
+
+.content-wrapper {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+max-height: 100vh;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+-ms-flex: 1;
+flex: 1;
+}
+
+.content-header {
+width: 100%;
+padding-top: 32px;
+padding-bottom: 32px;
+background-color: #2f2d51;
+}
+
+.content-header.task-header {
+background-color: #f2f4b2;
+}
+
+.header-text-wrapper {
+max-width: 660px;
+}
+
+.main {
+width: 100%;
+padding-top: 32px;
+padding-bottom: 32px;
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+-ms-flex: 1;
+flex: 1;
+}
+
+.main-page-flex {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+margin-right: -24px;
+margin-left: -24px;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+-webkit-flex-wrap: wrap;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+}
+
+.main-focus-content-wrapper {
+width: 60%;
+max-width: 100%;
+min-width: 660px;
+padding-right: 24px;
+padding-left: 24px;
+-webkit-box-flex: 1;
+-webkit-flex: auto;
+-ms-flex: auto;
+flex: auto;
+}
+
+.main-side-content-wrapper {
+max-width: 100%;
+min-width: 420px;
+padding-right: 24px;
+padding-left: 24px;
+-webkit-box-flex: 1;
+-webkit-flex: auto;
+-ms-flex: auto;
+flex: auto;
+}
+
+.card {
+padding: 28px;
+border-radius: 16px;
+background-color: #fff;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.03);
+}
+
+.card.small-card {
+padding: 20px;
+}
+
+.account-update-form {
+width: 100%;
+margin-bottom: 48px;
+}
+
+.tasks-outer-wrapper {
+width: 100%;
+margin-right: -12px;
+margin-left: -12px;
+padding-top: 20px;
+}
+
+.tasks-row {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+}
+
+.tasks-row.underlined {
+border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+color: #2d2a2b;
+text-decoration: none;
+}
+
+.tasks-row.header-row {
+padding-bottom: 12px;
+}
+
+.task-column {
+width: 88px;
+padding: 12px;
+-webkit-box-flex: 0;
+-webkit-flex: 0 auto;
+-ms-flex: 0 auto;
+flex: 0 auto;
+}
+
+.task-column.what-column {
+width: 300px;
+-webkit-box-flex: 1;
+-webkit-flex: auto;
+-ms-flex: auto;
+flex: auto;
+}
+
+.task-column.what-column.what-flex {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+}
+
+.task-column.date-column {
+width: 120px;
+}
+
+.task-column.date-what-column {
+width: 232px;
+}
+
+.tasks-header {
+margin-top: 0px;
+margin-bottom: 0px;
+font-family: Poppins, sans-serif;
+font-size: 18px;
+line-height: 24px;
+font-weight: 700;
+}
+
+.tasks-header.item-header {
+font-weight: 600;
+}
+
+.actions-wrapper {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+margin-bottom: 20px;
+padding-bottom: 20px;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+}
+
+.type-of-task-color-circle {
+width: 20px;
+height: 20px;
+margin-right: 12px;
+border-radius: 100px;
+background-color: #58f8be;
+}
+
+.select-field {
+width: auto;
+}
+
+.task-links-list {
+padding-top: 30px;
+}
+
+.task-link-item {
+padding-bottom: 3px;
+color: #4fc6a2;
+}
+
+.card-sub-item {
+padding-bottom: 24px;
+}
+
+.side-flex-content {
+margin-right: 12px;
+margin-left: 12px;
+}
+
+.button.new-button {
+border-radius: 100px;
+background-color: #664bfb;
+}
+
+.button.add-sign-button {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 52px;
+height: 52px;
+padding-right: 12px;
+padding-left: 12px;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+border-radius: 100px;
+background-color: #664bfb;
+font-size: 30px;
+line-height: 30px;
+font-weight: 400;
+text-decoration: none;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+}
+
+/* 
+====================
+text css
+==================== 
+*/
+.welcome-message {
+font-family: Poppins, sans-serif;
+font-size: 18px;
+line-height: 24px;
+}
+
+.h1 {
+margin-top: 0px;
+margin-bottom: 32px;
+font-family: Poppins, sans-serif;
+font-size: 40px;
+line-height: 46px;
+font-weight: 500;
+color: #2d2a2b;
+}
+
+.h1.no-margin-bottom {
+margin-bottom: 0px;
+}
+
+.h2 {
+margin-top: 0px;
+margin-bottom: 24px;
+font-size: 28px;
+line-height: 34px;
+}
+
+.inline-link {
+color: #4385f5;
+}
+
+.inline-link:hover {
+color: #005fff;
+text-decoration: underline;
+}
+
+.paragraph-small {
+color: #a1a0b0;
+font-size: 14px;
+}
+
+.paragraph-small.all-caps {
+text-transform: uppercase;
+}
+
+.h3 {
+margin-top: 0px;
+margin-bottom: 16px;
+font-family: Poppins, sans-serif;
+font-size: 22px;
+line-height: 28px;
+font-weight: 600;
+}
+
+.paragraph-normall {
+color: #a1a0b0;
+font-size: 18px;
+line-height: 24px;
+}
+
+.paragraph-normall.inline-link {
+display: block;
+padding-top: 3px;
+padding-bottom: 3px;
+-webkit-transition: all 120ms ease;
+transition: all 120ms ease;
+color: #4fc6a2;
+font-weight: 600;
+text-decoration: none;
+}
+
+.paragraph-normall.inline-link:hover {
+color: #58f8be;
+}
+
+.paragraph-normall.dark-semi-bold {
+color: #2d2a2b;
+font-weight: 600;
+}
+  
+.h6 {
+margin-top: 0px;
+margin-bottom: 8px;
+font-family: Poppins, sans-serif;
+font-size: 14px;
+line-height: 18px;
+font-weight: 500;
+text-transform: uppercase;
+}
+
+.date-text {
+font-size: 22px;
+line-height: 26px;
+font-weight: 700;
+}
+
+.white-text {
+color: #fff;
+}
+
+.inline-link {
+color: #4385f5;
+}
+
+.inline-link:hover {
+color: #005fff;
+text-decoration: underline;
+}
+
+/* 
+====================
+nav css
+==================== 
+*/
+.outer-nav-wrapper {
+width: 24%;
+max-width: 360px;
+min-width: 280px;
+padding: 32px;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-align: stretch;
+-webkit-align-items: stretch;
+-ms-flex-align: stretch;
+align-items: stretch;
+background-color: #fff;
+}
+
+.navbar {
+width: 100%;
+height: 100%;
+background-color: transparent;
+}
+
+.nav-container {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+height: 100%;
+max-width: 240px;
+margin-right: auto;
+margin-left: auto;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-align: stretch;
+-webkit-align-items: stretch;
+-ms-flex-align: stretch;
+align-items: stretch;
+}
+
+.logo-wrapper {
+width: 100%;
+}
+
+.nav-logo {
+width: 140px;
+}
+
+.nav-menu {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+min-width: 100%;
+padding: 80px 0px 0px;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+-webkit-box-align: start;
+-webkit-align-items: flex-start;
+-ms-flex-align: start;
+align-items: flex-start;
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+-ms-flex: 1;
+flex: 1;
+}
+
+.nav-top-menu {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+}
+
+.nav-bot-menu {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+}
+
+.nav-link {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+padding: 16px 24px;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+border-radius: 24px;
+-webkit-transition: all 200ms ease;
+transition: all 200ms ease;
+font-family: Poppins, sans-serif;
+color: #a1a0b0;
+font-size: 16px;
+line-height: 20px;
+font-weight: 500;
+text-decoration: none;
+}
+
+.nav-link:hover {
+background-color: #f2f2f2;
+color: #2d2a2b;
+}
+
+.current-tab {
+background-color: #58f8be !important;
+color: #2d2a2b !important;
+}
+
+.nav-icon {
+width: 28px;
+height: 28px;
+margin-right: 20px;
+}
+
+.nav-icon-active {
+filter: brightness(0.4);
+}
+
+.nav-link.small-nav-link {
+padding-top: 8px;
+padding-bottom: 8px;
+font-size: 16px;
+font-weight: 400;
+}
+
+.nav-icon.small-nav-icon {
+width: 20px;
+height: 20px;
+margin-right: 12px;
+}
+
+/* 
+===============================
+CSS for sign in up password page
+===============================
+*/
+.sign-in-up-password-wrapper {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+height: 100vh;
+max-width: 1920px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.sign-in-up-passowrd-art-wrapper {
+position: relative;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+padding: 40px;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-flex: 44%;
+-webkit-flex: 44%;
+-ms-flex: 44%;
+flex: 44%;
+background-color: #b2f4dc;
+}
+
+.sign-in-up-password-art-header-wrapper {
+max-width: 440px;
+}
+
+.sign-in-up-password-form-header-wrapper {
+padding-bottom: 12px;
+}
+
+.sign-in-up-password-header-large {
+font-family: Poppins, sans-serif;
+color: #2f2d51;
+font-size: 80px;
+line-height: 99px;
+font-weight: 500;
+}
+
+.sign-in-up-password-form-side {
+position: relative;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-flex: 2;
+-webkit-flex: 2 0 50%;
+-ms-flex: 2 0 50%;
+flex: 2 0 50%;
+padding: 40px;
+}
+
+.sign-in-up-password-form {
+width: 60%;
+max-width: 88%;
+min-width: 400px;
+}
+
+.change-to-signin-signup-link {
+position: absolute;
+left: auto;
+top: 0%;
+right: 0%;
+bottom: auto;
+margin-top: 12px;
+margin-right: 12px;
+padding: 12px;
+font-family: Poppins, sans-serif;
+color: #a1a0b0;
+font-size: 14px;
+line-height: 18px;
+font-weight: 400;
+text-decoration: none;
+}
+
+.button {
+padding: 12px 36px;
+border-radius: 8px;
+background-color: #ea4c88;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+line-height: 24px;
+font-weight: 500;
+border: none;
+color: white;
+cursor: pointer;
+}
+
+.button.wide-button {
+padding-right: 52px;
+padding-left: 52px;
+}
+
+.form-header {
+font-family: Poppins, sans-serif;
+margin-top: 0px;
+margin-bottom: 28px;
+font-size: 28px;
+line-height: 34px;
+}
+
+.form-row {
+margin-right: -12px;
+margin-bottom: 12px;
+margin-left: -12px;
+padding-bottom: 12px;
+}
+
+.form-flex {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+}
+
+.form-item-wrapper {
+width: 100%;
+padding-right: 12px;
+padding-left: 12px;
+}
+
+.form-item-wrapper.item-50 {
+width: 50%;
+}
+
+.input-field {
+width: 100%;
+height: 48px;
+padding: 8px 16px;
+border: 0px none #000;
+background-color: #f4f6f8;
+}
+
+.field-label {
+display: block;
+margin-bottom: 12px;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+line-height: 20px;
+}

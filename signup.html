@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/startly.css" rel="stylesheet" type="text/css">
+    <title>Startly Sign Up</title>
+</head>
+<body>
+    <div class="sign-in-up-password-wrapper">
+        <div class="sign-in-up-passowrd-art-wrapper">
+            <div class="sign-in-up-password-art-header-wrapper">
+                <h1 class="sign-in-up-password-header-large">Get the most out of your day!</h1>
+            </div>
+        </div>
+        <div class="sign-in-up-password-form-side">
+            <div class="sign-in-up-password-form">
+                <form id="signup-form" action="javascript:signup()">
+                    <div class="sign-in-up-password-form-header-wrapper">
+                        <h2 class="form-header">Sign up to Startly</h2>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-item-wrapper item-50"><label for="signup-name" class="field-label">Full Name</label>
+                                <input type="text" class="input-field" maxlength="256" name="signup-customername" data-name="signup-customername" placeholder="" id="signup-customername">
+                            </div>
+                            <div class="form-item-wrapper item-50">
+                                <label for="signup-username" class="field-label">Username</label>
+                                <input type="text" class="input-field" maxlength="256" name="signup-username" data-name="signup-username" placeholder="" id="signup-username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-item-wrapper">
+                                <label for="signup-email" class="field-label">Email Adress</label>
+                                <input type="email" class="input-field" maxlength="256" name="signup-email" data-name="signup-email" placeholder="" id="signup-email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-item-wrapper">
+                                <label for="signup-password" class="field-label">Password</label>
+                                <input type="password" class="input-field" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="signup-password" 
+                                data-name="signup-password" placeholder="8+ karakters, 1 uppercase en 1 cijfer" id="signup-password"></div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Create Account" data-wait="Please wait..." class="button wide-button">
+                </form>
+            </div>
+        </div>
+        </div><a href="login.html" class="change-to-signin-signup-link">Already a member?<span class="inline-link"> Log in</span></a></div>
+    </div>
+    <script>
+        // Aanmaken account
+        function signup() {
+            console.log("signup function started");
+            var email = document.getElementById('signup-email').value;
+            var password = document.getElementById('signup-password').value;
+            var username = document.getElementById('signup-username').value;
+            var customername = document.getElementById('signup-customername').value;
+
+            localStorage.setItem("startly-email", email);
+            localStorage.setItem("startly-password", password);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 'OK' || (xhr.status >= 200 && xhr.status < 400)) {
+                
+                        var inhoudDB = JSON.parse(this.responseText);
+                        console.log("VERSTUREN SIGNUP GELUKT!");
+                        window.location.href = "index.html";
+
+                    } else {
+                        console.log("VERSTUREN SIGNUP IS NIET GELUKT!");
+                    }
+                }
+            }
+
+            var user = {};
+            user.emailAdress = email;
+            user.passwordHash = password;
+            user.userName = username;
+            user.customerName = customername;
+
+            var json = JSON.stringify(user);
+
+            xhr.open("POST", "http://localhost:8082/api/customer/", true);
+            xhr.setRequestHeader("Content-type","application/json")
+            xhr.send(json);
+        }
+    </script>
+</body>
+</html>

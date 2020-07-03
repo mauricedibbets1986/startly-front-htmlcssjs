@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/startly.css" rel="stylesheet" type="text/css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-outer-container">
+        <div class="outer-nav-wrapper">
+            <div class="navbar ">
+                <div class="nav-container">
+                    <a href="#" class="logo-wrapper">
+                        <img src="img/startly logo.svg"
+                            sizes="140px" alt="" class="nav-logo">
+                    </a>
+                    <nav role="navigation" class="nav-menu">
+                        <div class="nav-top-menu">
+                            <a href="#" class="nav-link current-tab" onclick="javascript:currentTab(this); loadAccountContent();"><img src="img/dashboard icon.svg" alt="" class="nav-icon nav-icon-active">
+                                <div>Dashboard</div>
+                            </a>
+                            <a href="#" class="nav-link" onclick="javascript:currentTab(this); loadTasksDailyContent();"><img src="img/tasks icon.svg" alt="" class="nav-icon">
+                                <div>Tasks</div>
+                            </a>
+                            <a href="#" class="nav-link" onclick="javascript:currentTab(this)"><img src="img/project icon.svg" alt="" class="nav-icon">
+                                <div>Projects</div>
+                            </a>
+                            <a href="#" class="nav-link" onclick="javascript:currentTab(this)"><img src="" alt="" class="nav-icon">
+                                <div>To Do List</div>
+                            </a>
+                            <a href="#" class="nav-link" onclick="javascript:currentTab(this)"><img src="" alt="" class="nav-icon">
+                                <div>Sports</div>
+                            </a>
+                            <a href="#" class="nav-link" onclick="javascript:currentTab(this)"><img src="" alt="" class="nav-icon">
+                                <div>Food</div>
+                            </a>
+                        </div>
+                        <div class="nav-bot-menu">
+                            <a href="#" aria-current="page"
+                                class="nav-link small-nav-link" onclick="javascript:currentTab(this); loadAccountContent();"><img src="images/home.svg" alt=""
+                                    class="nav-icon small-nav-icon">
+                                <div>Account</div>
+                            </a>
+                            <a href="#" class="nav-link small-nav-linkk" onclick="javascript:currentTab(this)"><img src="images/home.svg" alt=""
+                                    class="nav-icon small-nav-icon">
+                                <div>Help Center</div>
+                            </a>
+                            <a href="#" class="nav-link small-nav-link" onclick="javascript:currentTab(this)"><img src="images/home.svg" alt=""
+                                    class="nav-icon small-nav-icon">
+                                <div>Settings</div>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-wrapper" id="page-content">
+            <!-- Page content loaded from JS -->
+        </div>
+    </div>
+    <script src="js/startly.js" type="text/javascript"></script>
+</body>
+</html>
